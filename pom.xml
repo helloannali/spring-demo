@@ -12,7 +12,7 @@
         <module>build-restful-demo</module>
         <module>consuming-restful-demo</module>
         <module>managing-transactions-demo</module>
-        <module>springmvc-chapter2</module>
+        <module>spring3-mvc-demo</module>
     </modules>
 
 
