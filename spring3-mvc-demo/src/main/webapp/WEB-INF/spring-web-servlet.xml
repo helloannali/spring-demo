@@ -23,6 +23,7 @@
     </bean>
 
 
+    <!--自动注册基于注解风格的处理器需要的DefaultAnnotationHandlerMapping、AnnotationMethodHandlerAdapter-->
     <mvc:annotation-driven />
 
 </beans>

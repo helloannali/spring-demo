@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
  * Created by annali on 5/11/16.
  */
 @Controller
-public class HelloWorldController2 {
+public class HelloWorldController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String printWelcome(ModelMap model) {
