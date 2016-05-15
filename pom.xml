@@ -14,6 +14,8 @@
         <module>managing-transactions-demo</module>
         <module>spring3-mvc-demo</module>
         <module>spring4-mvc-demo</module>
+        <module>spring-boot-with-docker</module>
+        <module>build-app-with-spring-boot</module>
     </modules>
 
 
