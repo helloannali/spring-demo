@@ -1,3 +1,4 @@
+<<<<<<< HEAD:spring3-mvc-demo/pom.xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
@@ -5,6 +6,14 @@
         <groupId>com.dollar</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <groupId>com.dollar</groupId>
+    <version>1.0-SNAPSHOT</version>
+>>>>>>> 5de28d77788edb59bcbb946defc5a0a0f425372c:springmvc-chapter2/pom.xml
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.dollar</groupId>
     <artifactId>spring3-mvc-demo</artifactId>
@@ -69,5 +78,17 @@
         </plugins>
     </build>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
