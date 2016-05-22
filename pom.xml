@@ -16,6 +16,8 @@
         <module>spring4-mvc-demo</module>
         <module>spring-boot-with-docker</module>
         <module>build-app-with-spring-boot</module>
+        <module>build-with-oauth2-and-spring-boot</module>
+        <module>spring-data-elasticsearch</module>
     </modules>
 
 
