@@ -1,6 +1,8 @@
 package com.dollar;
 
+import com.dollar.elasticsearch.dao.impl.EsDAOImpl;
 import org.elasticsearch.common.settings.Settings;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,19 +14,28 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * Created by annali on 5/22/16.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:/ioc-elasticsearch.xml")
-public class BookRepositoryTest {
+@ContextConfiguration("classpath:/conf/spring/ioc-elasticsearch.xml")
+public class EsDAOTest {
 
     @Autowired
     private ElasticsearchTemplate elasticsearchTemplate;
     private int numberOfShards = 1;
     private int numberOfReplicas = 1;
 
+    @Autowired
+    private EsDAOImpl esDAO;
+
 
     @Test
-    public void test() {
+    public void testCreateIndex() {
+        boolean flag = esDAO.createIndex("test-20160523");
+        Assert.assertTrue("create index fail", flag);
+    }
 
-        createIndexIfNotCreated("hello-test-1");
+    @Test
+    public void testDeleteIndex(){
+        boolean flag = esDAO.deleteIndex("test-20160523");
+        Assert.assertTrue("delete index fail", flag);
     }
 
     private boolean createIndexIfNotCreated(String indexName) {
