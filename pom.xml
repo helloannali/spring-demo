@@ -18,6 +18,7 @@
         <module>build-app-with-spring-boot</module>
         <module>build-with-oauth2-and-spring-boot</module>
         <module>spring-data-elasticsearch</module>
+        <module>spring3-beanfactory-demo</module>
     </modules>
 
 

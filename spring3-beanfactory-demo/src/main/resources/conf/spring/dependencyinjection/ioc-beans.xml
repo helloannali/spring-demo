@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- services -->
+    <bean id="appService" class="com.dollar.dependencyinjection.service.impl.AppServiceImpl">
+        <property name="appDao" ref="appDao"/>
+    </bean>
+
+    <bean id="appService2" class="com.dollar.dependencyinjection.service.impl.AppService2Impl">
+        <property name="appDao" ref="appDao"/>
+    </bean>
+
+    <!--daos-->
+    <bean id="appDao" scope="prototype" class="com.dollar.dependencyinjection.dao.impl.AppDAOImpl"/>
+
+    <!--lazy-init bean test-->
+    <bean id="lazyService" name="lazyService" class="com.dollar.dependencyinjection.service.impl.LazyServiceImpl" lazy-init="true"/>
+</beans>
