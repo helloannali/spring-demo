@@ -20,5 +20,6 @@ public class Boot {
         }
 
         SimpleMovieLister entity = ctx.getBean(SimpleMovieLister.class);
+
     }
 }
